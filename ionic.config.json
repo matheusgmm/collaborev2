@@ -1,0 +1,7 @@
+{
+  "name": "Collaborev2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
