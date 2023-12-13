@@ -1,0 +1,59 @@
+ion-header {
+    box-shadow: none;
+}
+
+ion-row {
+    margin: 1rem;
+  }
+
+.forget-password {
+    color: #6a707c;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.line-with-text {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6a707c;
+
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #6a707c;
+      margin: 0 10px;
+    }
+  }
+
+.col-avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.messages {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.dont-have-account {
+    color: #1E232C;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.register {
+    color: var(--ion-color-secondary);
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -4,20 +4,32 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  // --ion-color-primary: #3880ff;
+  // --ion-color-primary-rgb: 56, 128, 255;
+  // --ion-color-primary-contrast: #ffffff;
+  // --ion-color-primary-contrast-rgb: 255, 255, 255;
+  // --ion-color-primary-shade: #3171e0;
+  // --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary: #1e232c;
+	--ion-color-primary-rgb: 30,35,44;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #1a1f27;
+	--ion-color-primary-tint: #353941;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
-  --ion-color-secondary-rgb: 61, 194, 255;
-  --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  // --ion-color-secondary: #3dc2ff;
+  // --ion-color-secondary-rgb: 61, 194, 255;
+  // --ion-color-secondary-contrast: #ffffff;
+  // --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  // --ion-color-secondary-shade: #36abe0;
+  // --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary: #35c2c1;
+	--ion-color-secondary-rgb: 53,194,193;
+	--ion-color-secondary-contrast: #000000;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #2fabaa;
+	--ion-color-secondary-tint: #49c8c7;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -74,6 +86,22 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --ion-font-family: "Urbanist", "sans-serif";
+
+  ion-label > h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  ion-label > h1, h2 {
+    color: var(--ion-color-primary);
+  }
+
+  ion-button {
+    height: 48px;
+  }
+
 }
 
 // @media (prefers-color-scheme: dark) {

@@ -1,13 +1,79 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start" style="border: 1px solid #E8ECF4; border-radius: 12px;">
+      <ion-back-button icon="chevron-back-outline" defaultHref="/auth"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <form [formGroup]="formGroup" (ngSubmit)="onLogin()">
+    <ion-grid>
+
+      <ion-row class="ion-text-start">
+        <ion-col size-md="8" offset-md="2">
+          <ion-label>
+            <h1>Bem vindo de volta!</h1>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-md="8" offset-md="2">
+          <ion-item class="ion-no-padding">
+            <ion-input type="emal" label="E-mail" labelPlacement="floating" placeholder="Entre com seu e-mail" formControlName="email"></ion-input>
+            <ion-note class="ion-text-center" slot="end" color="danger" *ngIf="formGroup.get('email')?.dirty && formGroup.get('email')?.hasError('required')">Obrigatório</ion-note>
+            <ion-note class="ion-text-center" slot="end" color="danger" *ngIf="formGroup.get('email')?.dirty && formGroup.get('email')?.hasError('email')">E-mail inválido</ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-md="8" offset-md="2">
+          <ion-item class="ion-no-padding">
+            <ion-input type="password" label="Senha" labelPlacement="floating" placeholder="Entre com sua senha" formControlName="password"></ion-input>
+            <ion-note class="ion-text-center" slot="end" color="danger" *ngIf="formGroup.get('password')?.dirty && formGroup.get('password')?.hasError('required')">Obrigatório</ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-text-end">
+        <ion-col size-md="8" offset-md="2">
+          <ion-label class="forget-password" routerLink="/auth/change-password">Esqueceu a senha?</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-md="8" offset-md="2">
+          <ion-button type="submit" expand="block" color="primary" (click)="onLogin()">Login</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-margin-top">
+        <ion-col size-md="8" offset-md="2">
+          <div class="line-with-text">
+            <ion-label>Ou entre com</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="col-avatar">
+          <ion-avatar>
+            <ion-img style="cursor: pointer;" src="../../../assets/google_ic.svg"></ion-img>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="messages" >
+        <ion-col class="ion-text-center">
+          <ion-label class="dont-have-account">Não tem uma conta?</ion-label>
+          <ion-label class="register" routerLink="/auth/register">Cadastre-se</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+  
 </ion-content>

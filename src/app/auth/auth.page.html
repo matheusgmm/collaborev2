@@ -1,13 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">auth</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-no-padding ion-no-margin">
+      <ion-col size="12" size-sm="6" offset-sm="3" >
+        <ion-img src="../../assets/home-image.png"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-label>
+          <h1 class="ion-text-center slogan">Faça parte do Collabore</h1>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-text-center">
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-label>
+          <h2>Em busca de uma cidade melhor!</h2>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center ion-margin-top">
+      <ion-col size="4" size-md="4" offset-md="2">
+        <ion-img class="logo" src="../../assets/logo.svg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding ion-text-center">
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-label>
+          <h2>Collabore</h2>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-no-margin ion-padding">
+      <ion-col size-md="6" offset-md="3">
+        <ion-button 
+          expand="block"
+          color="primary"
+          routerLink="/auth/login"
+          routerDirection="forward"
+        >
+          Login
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-no-margin ion-padding-horizontal">
+      <ion-col size-md="6" offset-md="3">
+        <ion-button
+          fill="outline" 
+          expand="block"
+          color="primary"
+          routerLink="/auth/register"
+          routerDirection="forward"
+        >
+          Registre-se
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
