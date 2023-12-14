@@ -65,14 +65,14 @@ export class AuthService {
     return hasToken;
   }
 
-  // login(login: Login): Observable<{ token: string }> {
-  //   return this.http.post<{ token: string }>(`${this.API}/user/login`, login);
-  // }
   login(login: Login): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>(`${this.API}/user/login`, login).pipe(
-      delay(5000)
-    );
+    return this.http.post<{ token: string }>(`${this.API}/user/login`, login);
   }
+  // login(login: Login): Observable<{ token: string }> {
+  //   return this.http.post<{ token: string }>(`${this.API}/user/login`, login).pipe(
+  //     delay(5000)
+  //   );
+  // }
 
   async googleLogin() {
     try {

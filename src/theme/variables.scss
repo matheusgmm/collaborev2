@@ -102,6 +102,13 @@
     height: 48px;
   }
 
+  ion-loading.custom-loading {
+    border-radius: 12px;
+    --spinner-color: var(--ion-color-primary);
+    --backdrop-opacity: 0.33 !important;
+    
+  }
+
 }
 
 // @media (prefers-color-scheme: dark) {
