@@ -1,0 +1,27 @@
+ion-header {
+    box-shadow: none;
+}
+
+.messages {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.have-account {
+    color: #1E232C;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.login {
+    color: var(--ion-color-secondary);
+    font-weight: 600;
+    cursor: pointer;
+}
